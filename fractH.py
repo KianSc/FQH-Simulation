@@ -1,9 +1,10 @@
-
 from qiskit import QuantumCircuit
 from qiskit.primitives import StatevectorSampler
 from qiskit.quantum_info import Statevector, SparsePauliOp
 from qiskit.circuit.library import RYGate
 from qiskit.circuit.library import RZGate
+import os
+
 import matplotlib.pyplot as plt  
 import math
 
@@ -82,10 +83,26 @@ print(qc)
 
 z_vals = z_expectations(qc)
 
-js = list(range(len(z_vals)))
-plt.plot(js, z_vals, marker='o')
-plt.xlabel('qubit index j')
-plt.ylabel(r'$\langle Z_j \rangle$')
-plt.title(f'FQH circuit: M = {M}, t = {t}')
+# 1. Get the directory where this script is located
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# 2. Create the full path for the image
+save_path = os.path.join(script_dir, "circuit_diagram.png")
+
+# 3. Draw and Save
+fig = qc.draw(output='mpl', style='iqp')
+fig.savefig(save_path, dpi=300)
+print(f"Circuit diagram saved to: {save_path}")
+
+# Plotting the Expectation Values
+plt.figure()
+plt.plot(z_vals, 'o-', color='crimson')
+plt.title("Z-Pauli Expectation Values")
+plt.xlabel("Qubit Index")
+plt.ylabel("<Z>")
 plt.grid(True)
-plt.show()
+
+# Save the graph
+graph_path = os.path.join(script_dir, "results_graph.png")
+plt.savefig(graph_path, dpi=300)
+print(f"Results graph saved to: {graph_path}")
