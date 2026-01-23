@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="results_graph.png" width="600" />
-  <p><em>Z-Pauli expectation values showing the preserved Charge Density Wave (CDW) order with quantum fluctuations characteristic of the $\nu=1/3$ Laughlin state.</em></p>
+  <p><em>Z-Pauli expectation values showing the preserved Charge Density Wave (CDW) order with quantum fluctuations characteristic of the v = 1/3 Laughlin state.</em></p>
 </div>
 
 ## Overview
