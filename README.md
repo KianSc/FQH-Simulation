@@ -6,7 +6,7 @@
 </div>
 
 ## Overview
-This project utilizes **IBM Qiskit** to simulate the quantum circuit preparation of Fractional Quantum Hall (FQH) states on a 1D qubit chain. Specifically, it targets the **Laughlin state** at filling factor $\nu=1/3$.
+This project utilizes **IBM Qiskit** to simulate the quantum circuit preparation of Fractional Quantum Hall (FQH) states on a 1D qubit chain. Specifically, it targets the **Laughlin state**.
 
 ## Features
 * **State Initialization:** Prepares the root partition $|100100\dots\rangle$ corresponding to the $\nu=1/3$ Charge Density Wave (CDW).
