@@ -1,4 +1,4 @@
-# Variational Preparation of Fractional Quantum Hall States
+# Preparation of Fractional Quantum Hall States
 
 <div align="center">
   <img src="results_graph.png" width="600" />
